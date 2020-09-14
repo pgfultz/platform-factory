@@ -713,6 +713,46 @@ a:hover {
 }
 
 /*======================================
+//--//-->   methodology
+======================================*/
+
+.methodology-box {
+  background-color: #fff;
+  padding: 2.5rem 1.3rem;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+  height: 400px;
+}
+
+.methodology-box:hover .ico-circle {
+  transition: all 500ms ease;
+  color: #fff;
+  background-color: #0078ff;
+  box-shadow: 0 0 0 10px #cde1f8;
+}
+
+.methodology-box .service-ico {
+  margin-bottom: 1rem;
+  color: #1e1e1e;
+}
+
+.methodology-box .ico-circle {
+  transition: all 500ms ease;
+  font-size: 4rem;
+}
+
+.methodology-box .s-title {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: .4rem 0;
+}
+
+.methodology-box .s-description {
+  color: #4e4e4e;
+}
+
+/*======================================
 //--//-->   SERVICES
 ======================================*/
 
