@@ -26,9 +26,11 @@ var serviceName, serviceEmail, serviceTel = '';
   // Back to top button
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
-      $('.back-to-top').fadeIn('slow');
+	  $('.back-to-top').fadeIn('slow');
+	  $('.whatsapp-link').css('bottom', '70px');
     } else {
-      $('.back-to-top').fadeOut('slow');
+	  $('.back-to-top').fadeOut('slow');
+	  $('.whatsapp-link').css('bottom', '20px');
     }
   });
   $('.back-to-top').click(function(){

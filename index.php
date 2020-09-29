@@ -139,7 +139,7 @@
             <div class="service-content">
               <h2 class="s-title">Mobile</h2>
               <p class="s-description text-center">
-                Development  applications for Android and iOS. We use best development practices.
+                developing applications for Android and iOS. We use best development practices.
               </p>
             </div>
           </div>
@@ -325,7 +325,7 @@
             <div class="service-content">
               <h2 class="s-title">Tests</h2>
               <p class="s-description text-center">
-                We carry out all the necessary tests so  the APP / WEb can be launched without fail.
+                We carry out all the necessary tests so  the APP / Platform can be launched successfully.
               </p>
             </div>
           </div>
@@ -463,7 +463,7 @@
                 <div class="col-md-6">
                   <div class="title-box-2">
                     <h5 class="title-left">
-                      Send Message Us
+                      Contact us
                     </h5>
                   </div>
                   <div>
@@ -505,7 +505,7 @@
                 <div class="col-md-6">
                   <div class="title-box-2 pt-4 pt-md-0">
                     <h5 class="title-left">
-                      Contact us
+                      
                     </h5>
                   </div>
                   <div class="more-info">
@@ -514,6 +514,7 @@
                     </p>
                     <ul class="list-ico">
                       <li><span class="ion-ios-location"></span> New Road 57A, Chippenham, SN151ES - United Kingdom</li>
+                      <li><span class="ion-ios-telephone"></span> +44 7917-288150</li>
                       <li><span class="ion-email"></span> contact@platformfactory.co.uk</li>
                     </ul>
                   </div>
@@ -536,7 +537,7 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="copyright-box">
-              <p class="copyright">&copy; Copyright <strong>Platformfactory</strong>. All Rights Reserved</p>
+              <p class="copyright">&copy; Copyright <strong>Platform Factory</strong>. All Rights Reserved</p>
               <div class="credits">
                 <!--
                   All the links in the footer should remain intact.
@@ -636,7 +637,7 @@
       </div>
   </div>
 
-  <a href="https://wa.me/5533988169097" target="_blank" class="whatsapp-link"><i class="fa fa-whatsapp"></i></a>
+  <a href="https://wa.me/447917288150" target="_blank" class="whatsapp-link"><i class="fa fa-whatsapp"></i></a>
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <div id="preloader"></div>
 
