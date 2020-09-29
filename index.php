@@ -98,7 +98,7 @@
               Services
             </h3>
             <p class="subtitle-a">
-              What we offer is our best. We promise that we will do what we are best at.
+              We offer the best Web development for  Startups and entrepreneurs  who wish to offer digital customer experiences for their clients . We promise  excellent value and best prices.
             </p>
             <div class="line-mf"></div>
           </div>
@@ -152,52 +152,9 @@
 
   <div class="section-counter paralax-mf bg-image mt-5" style="background-image: url(img/counters-bg.jpg)">
     <div class="overlay-mf"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3 col-lg-3">
-          <div class="counter-box">
-            <div class="counter-ico">
-              <span class="ico-circle"><i class="ion-checkmark-round"></i></span>
-            </div>
-            <div class="counter-num">
-              <p class="counter">450</p>
-              <span class="counter-text">WORKS COMPLETED</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3 col-lg-3">
-          <div class="counter-box pt-4 pt-md-0">
-            <div class="counter-ico">
-              <span class="ico-circle"><i class="ion-ios-calendar-outline"></i></span>
-            </div>
-            <div class="counter-num">
-              <p class="counter">15</p>
-              <span class="counter-text">YEARS OF EXPERIENCE</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3 col-lg-3">
-          <div class="counter-box pt-4 pt-md-0">
-            <div class="counter-ico">
-              <span class="ico-circle"><i class="ion-ios-people"></i></span>
-            </div>
-            <div class="counter-num">
-              <p class="counter">550</p>
-              <span class="counter-text">TOTAL CLIENTS</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3 col-lg-3">
-          <div class="counter-box pt-4 pt-md-0">
-            <div class="counter-ico">
-              <span class="ico-circle"><i class="ion-ribbon-a"></i></span>
-            </div>
-            <div class="counter-num">
-              <p class="counter">36</p>
-              <span class="counter-text">AWARD WON</span>
-            </div>
-          </div>
-        </div>
+    <div class="container" style="padding: 0;">
+      <div class="row row-book-call">
+        <button class="button button-a button-big button-rouded" id="btn-book-call" onclick="handleBookFreeCall()">Book a Free Call</button>
       </div>
     </div>
   </div>
@@ -565,7 +522,7 @@
                       <li><a href="https://www.linkedin.com/company/platform-factory/" target="blank"><span class="ico-circle"><i class="ion-social-linkedin"></i></span></a></li>
                     </ul>
 
-                    <button class="button button-a button-big button-rouded mt-5">Book a Free Call</button>
+                    <button class="button button-a button-big button-rouded mt-5" onclick="handleBookFreeCall()">Book a Free Call</button>
                   </div>
                 </div>
               </div>
@@ -596,6 +553,90 @@
   </section>
   <!--/ Section Contact-footer End /-->
 
+  <!-- Mini chat -->
+
+  <div class="a-mini-chat">
+      <div class="mini-chat">
+        <div class="btn-open-close-mini-chat" onclick="handleMiniChat()">
+          <i class="fa fa-chevron-up"></i>
+        </div>
+
+        <div class="body-mini-chat">
+          <div class="mini-chat-step1">
+            <h5>What service do you need?</h5>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="service-needed" id="exampleRadios1" value="Develop a website or App" checked>
+              <label class="form-check-label" for="exampleRadios1">
+                Develop a website or App
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="service-needed" id="exampleRadios2" value="Develop a platform">
+              <label class="form-check-label" for="exampleRadios2">
+                Develop a platform
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="service-needed" id="exampleRadios3" value="Develop an e-commerce">
+              <label class="form-check-label" for="exampleRadios3">
+                Develop an e-commerce
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="service-needed" id="exampleRadios4" value="Develop a marketplace">
+              <label class="form-check-label" for="exampleRadios4">
+                Develop a marketplace
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="service-needed" id="exampleRadios5" value="Validate an idea">
+              <label class="form-check-label" for="exampleRadios5">
+                Validate an idea
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="service-needed" id="exampleRadios6" value="Other">
+              <label class="form-check-label" for="exampleRadios6">
+                Other
+              </label>
+            </div>
+
+            <input type="text" name="other-service-needed" id="other-service-needed" placeholder="Please write here..." style="margin-top: 5px; width: 100%; display: none;" />
+            <button type="button" class="btn btn-primary btn-continue-step" id="btn-continue-step1" onclick="goToStepTwo()">Continue</button>
+          </div>
+
+          <div class="mini-chat-step2">
+            <h5>Briefly describe your project</h5>
+
+            <textarea name="service-needed-describe" id="service-needed-describe" placeholder="Describe your project here"></textarea>
+            <button type="button" class="btn btn-primary btn-continue-step" id="btn-continue-step1" onclick="goToStepThree()">Continue</button>
+          </div>
+
+          <div class="mini-chat-step3">
+            <h5>What is your contact?</h5>
+
+            <input type="text" name="name-service-needed" id="name-service-needed" placeholder="Name" style="margin-top: 25px; width: 100%;" />
+            <input type="email" name="email-service-needed" id="email-service-needed" placeholder="Email" style="margin-top: 5px; width: 100%;" />
+            <input type="tel" name="tel-service-needed" id="tel-service-needed" placeholder="Telephone" style="margin-top: 5px; width: 100%;" />
+            <button type="button" class="btn btn-primary btn-continue-step" id="btn-continue-step1" onclick="goToStepFour()">Continue</button>
+          </div>
+
+          <div class="mini-chat-step4">
+            <h5>Book a free call with one of our experts to get more information about how we can help you</h5>
+            
+            <button type="button" class="btn btn-primary btn-continue-step" id="btn-continue-step1" onclick="goToStepFive()">Book a free call</button>
+          </div>
+
+          <div class="mini-chat-step5">
+            <h5>Thank you! We will contact you as soon as possible.</h5>
+          </div>
+
+        </div>
+      </div>
+  </div>
+
+  <a href="https://wa.me/5533988169097" target="_blank" class="whatsapp-link"><i class="fa fa-whatsapp"></i></a>
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <div id="preloader"></div>
 
