@@ -105,6 +105,9 @@ require_once 'config.php';
                     echo '<div class="col-md-8"><center><h3>Post not found</h3></center></div>';
                 }else{
                 $blog = $sql->fetchObject();
+
+                $comentarios = $pdo->prepare("SELECT * FROM `blog_comments` WHERE `id_blog` = ?");
+                $comentarios->execute(array($blog->id));
         ?>
 
         <div class="col-md-8">
@@ -125,17 +128,14 @@ require_once 'config.php';
                 </li>
                 <li>
                   <span class="ion-chatbox"></span>
-                  <a href="#">14</a>
+                  <a href="#"><?php echo $comentarios->rowCount(); ?></a>
                 </li>
               </ul>
             </div>
             <div class="article-content"><?php echo $blog->descricao; ?></div>
           </div>
           <div class="box-comments">
-            <?php
-            $comentarios = $pdo->prepare("SELECT * FROM `blog_comments` WHERE `id_blog` = ?");
-            $comentarios->execute(array($blog->id));
-            ?>
+ 
             <div class="title-box-2">
               <h4 class="title-comments title-left">Comments (<?php echo $comentarios->rowCount(); ?>)</h4>
             </div>
@@ -150,7 +150,7 @@ require_once 'config.php';
                 </div>
                 <div class="comment-details">
                   <h4 class="comment-author"><?php echo $comentario->nome; ?></h4>
-                  <span><?php echo $date->format('d/M/Y'); ?></span>
+                  <span><?php echo $dataComentario->format('d M Y'); ?></span>
                   <p><?php echo $comentario->comment; ?></p>
                 </div>
               </li>
@@ -172,7 +172,7 @@ require_once 'config.php';
                 </div>
                 <div class="col-md-6 mb-3">
                   <div class="form-group">
-                    <input type="email" class="form-control input-mf" name="inputEmail1" placeholder="Email *" required>
+                    <input type="email" class="form-control input-mf" name="inputEmail" placeholder="Email *" required>
                   </div>
                 </div>
                 <div class="col-md-12 mb-3">
