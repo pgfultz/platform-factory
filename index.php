@@ -194,7 +194,7 @@
         <div class="col-md-4">
           <div class="work-box">
             <div onclick="getProjectDetails(<?php echo $project->id?>)">
-              <div class="work-img" id="capa-projeto" style="background-image: url(<?php echo BASE."/uploads/".$project->logo; ?>)"></div>
+              <div class="work-img" id="capa-projeto" style="background-image: url(<?php echo BASE_ADM."/uploads/".$project->logo; ?>)"></div>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">

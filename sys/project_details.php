@@ -23,7 +23,7 @@
                 <?php
                     while($project_photo = $project_photos->fetchObject()){
                     ?>
-                    <li><div class="photo-ul" style="background-image: url('<?php echo BASE; ?>/uploads/<?php echo $project_photo->photo; ?>')"></div></li>
+                    <li><div class="photo-ul" style="background-image: url('<?php echo BASE_ADM; ?>/uploads/<?php echo $project_photo->photo; ?>')"></div></li>
                     <?php
                     }
                 ?>
