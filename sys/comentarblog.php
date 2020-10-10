@@ -4,7 +4,7 @@ if(isset($_GET['id'])){
     require_once '../config.php';
     $id = $_GET['id'];
     $nome = $_POST['inputName'];
-    $email = $_POST['inpupEmail'];
+    $email = $_POST['inputEmail'];
     $website = $_POST['inputUrl'];
     $comentario = $_POST['message'];
 

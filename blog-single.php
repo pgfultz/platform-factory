@@ -212,21 +212,16 @@ require_once 'config.php';
             <h5 class="sidebar-title">Recent Post</h5>
             <div class="sidebar-content">
               <ul class="list-sidebar">
+                <?php
+                $recentsposts = $pdo->prepare("SELECT * FROM `blog` LIMIT 5");
+                $recentsposts->execute();
+                while($rp = $recentsposts->fetchObject()){
+                ?>
                 <li>
-                  <a href="#">Atque placeat maiores.</a>
+                  <a href="blog-single.php?post=<?php echo $rp->id; ?>"><?php echo $rp->titulo; ?></a>
                 </li>
-                <li>
-                  <a href="#">Lorem ipsum dolor sit amet consectetur</a>
-                </li>
-                <li>
-                  <a href="#">Nam quo autem exercitationem.</a>
-                </li>
-                <li>
-                  <a href="#">Atque placeat maiores nam quo autem</a>
-                </li>
-                <li>
-                  <a href="#">Nam quo autem exercitationem.</a>
-                </li>
+                <?php } ?>
+               
               </ul>
             </div>
           </div>

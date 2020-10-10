@@ -1168,6 +1168,15 @@ a:hover {
   position: relative;
 }
 
+#capa-mini-blog{
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: white;
+}
+
 .card-blog .card-category-box {
   position: absolute;
   text-align: center;
@@ -1199,10 +1208,16 @@ a:hover {
 .card-blog .card-title {
   font-size: 1.3rem;
   margin-top: .6rem;
+  height: 1.44rem;
+  line-height: 1.3rem;
+  overflow: hidden;
 }
 
 .card-blog .card-description {
   color: #4e4e4e;
+  height: 200px;
+  line-height: 200px;
+  overflow: hidden;
 }
 
 .card-blog .post-author {

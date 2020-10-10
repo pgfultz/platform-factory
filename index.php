@@ -353,99 +353,48 @@
         </div>
       </div>
       <div class="row">
+      
+      <?php
+      $blog = $pdo->prepare("SELECT * FROM `blog` ORDER BY `id` DESC LIMIT 3");
+      $blog->execute();
+      if($blog->rowCount() > 0){
+        while($artigo = $blog->fetchObject()){
+          $dataArtigo = new DateTime($artigo->created_at);
+      ?>
         <div class="col-md-4">
           <div class="card card-blog">
             <div class="card-img">
-              <a href="blog-single.html"><img src="img/post-1.jpg" alt="" class="img-fluid"></a>
+              <a href="blog-single.php?post=<?php echo $artigo->id; ?>">
+                <div id="capa-mini-blog" style="background-image: url('<?php echo BASE_ADM; ?>/uploads/<?php echo $artigo->capa; ?>')" alt="capa" class="img-fluid"></div>
+              </a>
             </div>
             <div class="card-body">
               <div class="card-category-box">
                 <div class="card-category">
-                  <h6 class="category">Travel</h6>
+                  <h6 class="category"><?php echo $artigo->categoria; ?></h6>
                 </div>
               </div>
-              <h3 class="card-title"><a href="blog-single.html">See more ideas about Travel</a></h3>
-              <p class="card-description">
-                Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
-                a pellentesque nec,
-                egestas non nisi.
-              </p>
+              <h3 class="card-title"><a href="blog-single.php?post=<?php echo $artigo->id; ?>"><?php echo $artigo->titulo; ?></a></h3>
             </div>
             <div class="card-footer">
               <div class="post-author">
-                <a href="#">
-                  <img src="img/testimonial-2.jpg" alt="" class="avatar rounded-circle">
-                  <span class="author">Morgan Freeman</span>
-                </a>
+                <b>
+                  <span class="author"><?php echo $artigo->autor; ?></span>
+                </b>
               </div>
               <div class="post-date">
-                <span class="ion-ios-clock-outline"></span> 10 min
+                <span class="ion-ios-clock-outline"></span> <?php echo $dataArtigo->format('d M Y'); ?>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card card-blog">
-            <div class="card-img">
-              <a href="blog-single.html"><img src="img/post-2.jpg" alt="" class="img-fluid"></a>
-            </div>
-            <div class="card-body">
-              <div class="card-category-box">
-                <div class="card-category">
-                  <h6 class="category">Web Design</h6>
-                </div>
-              </div>
-              <h3 class="card-title"><a href="blog-single.html">See more ideas about Travel</a></h3>
-              <p class="card-description">
-                Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
-                a pellentesque nec,
-                egestas non nisi.
-              </p>
-            </div>
-            <div class="card-footer">
-              <div class="post-author">
-                <a href="#">
-                  <img src="img/testimonial-2.jpg" alt="" class="avatar rounded-circle">
-                  <span class="author">Morgan Freeman</span>
-                </a>
-              </div>
-              <div class="post-date">
-                <span class="ion-ios-clock-outline"></span> 10 min
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card card-blog">
-            <div class="card-img">
-              <a href="blog-single.html"><img src="img/post-3.jpg" alt="" class="img-fluid"></a>
-            </div>
-            <div class="card-body">
-              <div class="card-category-box">
-                <div class="card-category">
-                  <h6 class="category">Web Design</h6>
-                </div>
-              </div>
-              <h3 class="card-title"><a href="blog-single.html">See more ideas about Travel</a></h3>
-              <p class="card-description">
-                Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
-                a pellentesque nec,
-                egestas non nisi.
-              </p>
-            </div>
-            <div class="card-footer">
-              <div class="post-author">
-                <a href="#">
-                  <img src="img/testimonial-2.jpg" alt="" class="avatar rounded-circle">
-                  <span class="author">Morgan Freeman</span>
-                </a>
-              </div>
-              <div class="post-date">
-                <span class="ion-ios-clock-outline"></span> 10 min
-              </div>
-            </div>
-          </div>
-        </div>
+      <?php
+        }
+      }else{
+        echo "<center><h3>We don't have any posts yet :(</h3></center>";
+      }
+      ?>
+
       </div>
     </div>
   </section>
