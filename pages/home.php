@@ -206,10 +206,9 @@
               <div class="work-img" id="capa-projeto" style="background-image: url(<?php echo BASE_ADM."/uploads/".$project->logo; ?>)"></div>
               <div class="work-content">
                 <div class="row">
-                  <div class="col-sm-8">
+                  <div class="col-12">
                     <h2 class="w-title"><?php echo $project->name; ?></h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
                     </div>
                   </div>
                 </div>
@@ -390,7 +389,7 @@
             <div class="card-footer">
               <div class="post-author">
                 <b>
-                  
+                  <!-- Onde ficava o nome de quem postou-->
                 </b>
               </div>
               <div class="post-date">

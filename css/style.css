@@ -316,6 +316,11 @@ a:hover {
   box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
 }
 
+.work-box {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
 .box-shadow-a,
 .button:hover {
   box-shadow: 0 0 0 4px #cde1f8;
@@ -1079,6 +1084,7 @@ a:hover {
 }
 
 .work-img {
+  cursor: pointer;
   display: block;
   overflow: hidden;
 }
@@ -1116,6 +1122,9 @@ a:hover {
 
 .w-title {
   font-size: 1.2rem;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
 }
 
 /*======================================
