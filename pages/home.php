@@ -390,7 +390,7 @@
             <div class="card-footer">
               <div class="post-author">
                 <b>
-                  <span class="author"><?php echo $artigo->autor; ?></span>
+                  
                 </b>
               </div>
               <div class="post-date">
