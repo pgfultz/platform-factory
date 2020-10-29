@@ -236,6 +236,37 @@ function goToStepFive(){
 	}
 }
 
+function backStepMiniChat(step){
+	if(step == 1){
+		$('.mini-chat-step1').show();
+		$('.mini-chat-step2').hide();
+		$('.mini-chat-step3').hide();
+		$('.mini-chat-step4').hide();
+		$('.mini-chat-step5').hide();
+	}
+	if(step == 2){
+		$('.mini-chat-step1').hide();
+		$('.mini-chat-step2').show();
+		$('.mini-chat-step3').hide();
+		$('.mini-chat-step4').hide();
+		$('.mini-chat-step5').hide();
+	}
+	if(step == 3){
+		$('.mini-chat-step1').hide();
+		$('.mini-chat-step2').hide();
+		$('.mini-chat-step3').show();
+		$('.mini-chat-step4').hide();
+		$('.mini-chat-step5').hide();
+	}
+	if(step == 4){
+		$('.mini-chat-step1').hide();
+		$('.mini-chat-step2').hide();
+		$('.mini-chat-step3').hide();
+		$('.mini-chat-step4').show();
+		$('.mini-chat-step5').hide();
+	}
+}
+
 function handleBookFreeCall(){
 	if(serviceNeeded != '' && projectDescribe != '' && serviceName != '' && serviceEmail != '' && serviceTel != ''){
 		let urlBookCall = window.open('https://calendly.com/c-o-gabriel/30min', '_blank');
@@ -252,3 +283,34 @@ function handleBookFreeCall(){
 		}
 	}
 }
+
+$('#form-contact-us').on('submit', function(e){
+	e.preventDefault();
+
+	var dados = {
+		name: $('#name_contactus').val(),
+		email: $('#email_contactus').val(),
+		subject: $('#subject_contactus').val(),
+		message: $('#message_contactus').val(),
+	};
+
+	$.ajax({
+		url: 'sys/sendmessage.php',
+		type: 'POST',
+		data: dados,
+		dataType: 'JSON',
+		success: function(retorno){
+			if(retorno[0].status  == "error"){
+				$('#errormessage').show();
+			}else{
+				$('#sendmessage').show();
+				
+				$('#name_contactus').val('');
+				$('#email_contactus').val('');
+				$('#subject_contactus').val('');
+				$('#message_contactus').val('');
+			}
+		}
+	});
+
+});

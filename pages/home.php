@@ -427,31 +427,31 @@
                     </h5>
                   </div>
                   <div>
-                      <form action="" method="post" role="form" class="contactForm">
+                      <form action="" method="post" id="form-contact-us">
                       <div id="sendmessage">Your message has been sent. Thank you!</div>
-                      <div id="errormessage"></div>
+                      <div id="errormessage">An error has occurred</div>
                       <div class="row">
                         <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <input type="text" name="name" class="form-control" id="name_contactus" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required="required" />
                             <div class="validation"></div>
                           </div>
                         </div>
                         <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                            <input type="email" class="form-control" name="email" id="email_contactus" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" required="required" />
                             <div class="validation"></div>
                           </div>
                         </div>
                         <div class="col-md-12 mb-3">
                             <div class="form-group">
-                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                              <input type="text" class="form-control" name="subject" id="subject_contactus" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required="required" />
                               <div class="validation"></div>
                             </div>
                         </div>
                         <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                            <textarea class="form-control" name="message" id="message_contactus" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message" required="required"></textarea>
                             <div class="validation"></div>
                           </div>
                         </div>
@@ -481,6 +481,7 @@
                   <div class="socials">
                     <ul>
                       <li><a href="https://www.linkedin.com/company/platform-factory/" target="blank"><span class="ico-circle"><i class="ion-social-linkedin"></i></span></a></li>
+                      <li><a href="https://www.instagram.com/platformfactory/" target="blank"><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
                     </ul>
 
                     <button class="button button-a button-big button-rouded mt-5" onclick="handleBookFreeCall()">Book a Free Call</button>
@@ -568,6 +569,7 @@
           </div>
 
           <div class="mini-chat-step2">
+            <div class="btn-back-mini-chat" onclick="backStepMiniChat(1)"><i class="fa fa-arrow-left"></i></div>
             <h5>Briefly describe your project</h5>
 
             <textarea name="service-needed-describe" id="service-needed-describe" placeholder="Describe your project here"></textarea>
@@ -575,6 +577,7 @@
           </div>
 
           <div class="mini-chat-step3">
+            <div class="btn-back-mini-chat" onclick="backStepMiniChat(2)"><i class="fa fa-arrow-left"></i></div>
             <h5>What is your contact?</h5>
 
             <input type="text" name="name-service-needed" id="name-service-needed" placeholder="Name" style="margin-top: 25px; width: 100%;" />
@@ -584,6 +587,7 @@
           </div>
 
           <div class="mini-chat-step4">
+            <div class="btn-back-mini-chat" onclick="backStepMiniChat(3)"><i class="fa fa-arrow-left"></i></div>
             <h5>Book a free call with one of our experts to get more information about how we can help you</h5>
             
             <button type="button" class="btn btn-primary btn-continue-step" id="btn-continue-step1" onclick="goToStepFive()">Book a free call</button>

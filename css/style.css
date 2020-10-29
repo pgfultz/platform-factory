@@ -1583,6 +1583,13 @@ footer .credits a {
   }
 }
 
+.btn-back-mini-chat{
+  color: #0062d3;
+  width: 30px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
 .whatsapp-link {
   position: fixed;
   color: #FFF;
