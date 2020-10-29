@@ -8,7 +8,7 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="<?php echo BASE; ?>/img/favicon.png" rel="icon">
+  <link href="<?php echo BASE; ?>/img/logo.png" rel="icon">
   <link href="<?php echo BASE; ?>/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Bootstrap CSS File -->
@@ -36,7 +36,7 @@
   <!--/ Nav Star /-->
   <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll" href="#page-top">Platform Factory</a>
+      <a class="navbar-brand js-scroll" href="<?php echo BASE; ?>">Platform Factory</a>
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
         aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span></span>
@@ -46,22 +46,22 @@
       <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="index.php">Home</a>
+            <a class="nav-link js-scroll" href="<?php echo BASE; ?>">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#">About</a>
+            <a class="nav-link js-scroll" href="<?php echo BASE; ?>">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#">Services</a>
+            <a class="nav-link js-scroll" href="<?php echo BASE; ?>">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#">Work</a>
+            <a class="nav-link js-scroll" href="<?php echo BASE; ?>">Work</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#">Blog</a>
+            <a class="nav-link js-scroll" href="<?php echo BASE; ?>">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#">Contact</a>
+            <a class="nav-link js-scroll" href="<?php echo BASE; ?>">Contact</a>
           </li>
         </ul>
       </div>
@@ -158,7 +158,7 @@
                 Leave a Reply
               </h3>
             </div>
-            <form action="sys/comentarblog.php?id=<?php echo $blog->id; ?>" method="post" class="form-mf">
+            <form action="<?php echo BASE; ?>/sys/comentarblog.php?id=<?php echo $blog->id; ?>&titulo=<?php echo $explode[2]; ?>" method="post" class="form-mf">
               <div class="row">
                 <div class="col-md-6 mb-3">
                   <div class="form-group">
