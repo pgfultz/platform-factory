@@ -141,7 +141,7 @@
                 ?>
               <li>
                 <div class="comment-avatar">
-                  <img src="img/avatar.jpg" alt="">
+                  <img src="<?php echo BASE; ?>/img/avatar.jpg" alt="">
                 </div>
                 <div class="comment-details">
                   <h4 class="comment-author"><?php echo $comentario->nome; ?></h4>
