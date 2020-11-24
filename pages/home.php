@@ -455,7 +455,7 @@
                           </div>
                         </div>
                         <div class="col-md-12">
-                          <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
+                          <button type="submit" id="btn-contact-us-submit" class="button button-a button-big button-rouded">Send Message</button>
                         </div>
                       </div>
                     </form>

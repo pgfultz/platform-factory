@@ -286,6 +286,9 @@ function handleBookFreeCall(){
 
 $('#form-contact-us').on('submit', function(e){
 	e.preventDefault();
+	
+	$('#btn-contact-us-submit').html('Sending');
+	$('#btn-contact-us-submit').attr('disabled', 'disabled');
 
 	var dados = {
 		name: $('#name_contactus').val(),
@@ -300,8 +303,10 @@ $('#form-contact-us').on('submit', function(e){
 		data: dados,
 		dataType: 'JSON',
 		success: function(retorno){
-			if(retorno[0].status  == "error"){
+			if(retorno[0].status == "error"){
 				$('#errormessage').show();
+			}else if(retorno[0].status_mail  == "error"){
+				alert(retorno[0].mail_error_message);
 			}else{
 				$('#sendmessage').show();
 				
@@ -309,6 +314,8 @@ $('#form-contact-us').on('submit', function(e){
 				$('#email_contactus').val('');
 				$('#subject_contactus').val('');
 				$('#message_contactus').val('');
+
+				$('#btn-contact-us-submit').html('Sent');
 			}
 		}
 	});
